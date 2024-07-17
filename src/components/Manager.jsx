@@ -11,8 +11,7 @@ function Manager() {
   const [passwordArray, setPasswordArray] = useState([]);
 
   useEffect(() => {
-    let passwords = localStorage.getItem("password ");
-    let passwordArray;
+    let passwords = localStorage.getItem("password");
     if (passwords) {
       setPasswordArray(JSON.parse(passwords));
     }
@@ -23,8 +22,9 @@ function Manager() {
   };
 
   const savePassword = () => {
-    setPasswordArray([...passwordArray, form]);
-    localStorage.setItem("password", JSON.stringify([...passwordArray, form]));
+    const updatedPasswordArray = [...passwordArray, form];
+    setPasswordArray(updatedPasswordArray);
+    localStorage.setItem("password", JSON.stringify(updatedPasswordArray));
     console.log(...passwordArray, form);
   };
 
