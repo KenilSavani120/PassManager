@@ -43,12 +43,7 @@ function Navbar() {
 
           {/* Navigation Links - Desktop */}
           <div className="hidden md:flex items-center space-x-4">
-            <NavLink to="/" className={({ isActive }) => `hover:text-green-500 ${isActive ? 'font-bold' : ''}`}>
-              Home
-            </NavLink>
-            <NavLink to="/manager" className={({ isActive }) => `hover:text-green-500 ${isActive ? 'font-bold' : ''}`}>
-              Manager
-            </NavLink>
+           
             <button onClick={handleLogout} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
               Logout
             </button>
