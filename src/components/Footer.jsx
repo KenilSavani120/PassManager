@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="bg-slate-800 py-1 fixed bottom-0 w-full flex-col items-center justify-center">
+    <div className="bg-slate-800 py-1  bottom-0 w-full flex-col items-center justify-center">
       <div className="flex items-center justify-center">
         <span className="text-green-500 font-bold text-lg">&lt;</span>
         <h1 className="font-bold text-white text-lg">Pass</h1>

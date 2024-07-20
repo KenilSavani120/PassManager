@@ -163,8 +163,8 @@ function Manager() {
         <div className="passwords mt-8">
           <h2 className="font-bold text-xl md:text-2xl py-4">Your Passwords</h2>
           {passwordArray.length === 0 && <div>No Passwords</div>}
-          {passwordArray.length !== 0 && (
-            <div className="overflow-x-auto">
+          {passwordArray.length > 0 && (
+            <div className="overflow-y-auto max-h-96">
               <table className="table-auto w-full rounded-lg">
                 <thead className="bg-green-800 text-white">
                   <tr>
