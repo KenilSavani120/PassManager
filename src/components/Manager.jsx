@@ -105,7 +105,6 @@ function Manager() {
         transition="Bounce"
       />
       <div className="absolute inset-0 -z-10 h-full w-full bg-green-50 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
-        {" "}
         // this is for grid bg , used form ibelick
         <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-green-400 opacity-20 blur-[100px]"></div>
       </div>
@@ -176,7 +175,7 @@ function Manager() {
         </div>
 
         <div className="passwords mt-8">
-          <h2 className="font-bold text-xl md:text-2xl py-4">Your Passwords</h2>
+          <h2 className="font-bold text-xl md:text-2xl py-5">Your Passwords</h2>
           {passwordArray.length === 0 && <div>No Passwords</div>}{" "}
           {/* if pass is saved than shows password otherwise shows no passwords*/}
           {passwordArray.length > 0 && (
@@ -196,10 +195,13 @@ function Manager() {
                     <tr key={index}>
                       {/* index showing how many passwords are saved*/}
                       <td className="py-2 px-4 border border-white">
-                        <div className="flex items-center justify-between">
+                        <div className="flex items-center ">
                           <span className="truncate mr-2">{item.site}</span>
                           {/* truncate = it's hide the overflow of element , text overflow to ellipsis for hiding extra texts and it's shows ..., white space is nowrap */}
-                          <button onClick={() => copyText(item.site)}>
+                          <button
+                            onClick={() => copyText(item.site)}
+                            className="ml-3"
+                          >
                             {/*this is copy btn */}
                             <lord-icon
                               src="https://cdn.lordicon.com/depeqmsz.json"
@@ -210,9 +212,12 @@ function Manager() {
                         </div>
                       </td>
                       <td className="py-2 px-4 border border-white">
-                        <div className="flex items-center justify-between">
+                        <div className="flex items-center">
                           <span className="truncate mr-2">{item.username}</span>
-                          <button onClick={() => copyText(item.username)}>
+                          <button
+                            onClick={() => copyText(item.username)}
+                            className="ml-3"
+                          >
                             <lord-icon
                               src="https://cdn.lordicon.com/depeqmsz.json"
                               trigger="hover"
@@ -223,9 +228,12 @@ function Manager() {
                         </div>
                       </td>
                       <td className="py-2 px-4 border border-white">
-                        <div className="flex items-center justify-between">
+                        <div className="flex items-center ">
                           <span className="truncate mr-2">{item.password}</span>
-                          <button onClick={() => copyText(item.password)}>
+                          <button
+                            onClick={() => copyText(item.password)}
+                            className="ml-3"
+                          >
                             <lord-icon
                               src="https://cdn.lordicon.com/depeqmsz.json"
                               trigger="hover"
