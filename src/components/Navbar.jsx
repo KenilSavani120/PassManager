@@ -6,13 +6,15 @@ function Navbar() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem('isLoggedIn');
-    navigate('/');
+    localStorage.removeItem("isLoggedIn");
+    navigate("/");
   };
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  // it is for set isOpen State and set menu bar in small screen
 
   return (
     <nav className="bg-slate-800 text-white">
@@ -33,9 +35,18 @@ function Navbar() {
             >
               <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
                 {isOpen ? (
-                  <path fillRule="evenodd" clipRule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+                  />
                 ) : (
-                  <path fillRule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+                  //it is svg for close icon
+                  <path
+                    fillRule="evenodd"
+                    d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+                  />
+                  //it is svg for open icon
                 )}
               </svg>
             </button>
@@ -43,8 +54,10 @@ function Navbar() {
 
           {/* Navigation Links - Desktop */}
           <div className="hidden md:flex items-center space-x-4">
-           
-            <button onClick={handleLogout} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+            <button
+              onClick={handleLogout}
+              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+            >
               Logout
             </button>
           </div>
@@ -54,13 +67,10 @@ function Navbar() {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <NavLink to="/" className={({ isActive }) => `block hover:text-green-500 ${isActive ? 'font-bold' : ''}`}>
-                Home
-              </NavLink>
-              <NavLink to="/manager" className={({ isActive }) => `block hover:text-green-500 ${isActive ? 'font-bold' : ''}`}>
-                Manager
-              </NavLink>
-              <button onClick={handleLogout} className="w-full text-left bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-2">
+              <button
+                onClick={handleLogout}
+                className="w-full text-left bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-2"
+              >
                 Logout
               </button>
             </div>

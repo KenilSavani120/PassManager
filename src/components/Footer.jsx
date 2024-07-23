@@ -9,9 +9,7 @@ function Footer() {
         <span className="text-green-500 font-bold text-lg">Op/&gt;</span>
       </div>
       <div className="flex items-center justify-center text-white text-sm">
-        Created with{" "}
-        <i className="fa-solid fa-heart text-lg mx-1 text-red-700"></i>by Kenil
-        Savani
+        Created with 💖 by Kenil Savani
       </div>
     </div>
   );
